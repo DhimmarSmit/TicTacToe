@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Yuji+Mai&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height:5vw;
+    background:lightgoldenrodyellow;
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    font-family:  "Yuji Mai", serif;
+    padding:0 80px;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    margin-top:30px;
+    border-radius: 10px;
+}
+
+.container{
+    display: grid;
+    color:black;
+    position: relative;
+    grid-template-rows:repeat(3,12vw);
+    grid-template-columns:repeat(3,12vw);
+}
+
+.square{
+    border: 2px solid rgb(0, 0, 0);
+    font-size:10vw;
+    display: flex;
+    justify-content: center;
+    cursor:pointer;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 200;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+.game-info{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 3vw;
+    margin-left: 30px;
+}
+
+.details {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button{
+    padding:3px 30px;
+    border-radius: 5px;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 200;
+    background: #FAFAD2;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1.3vw;
+}
+
+.game-info img{
+    width:0;
+    transition: width 1s ease-in-out;
+}
+
+.line{
+    width:35vw;
+    height:3px;
+    display: flex;
+    position: absolute;
+    background:red;
+    opacity:0;
+    transition: opacity 1s ease-in-out;
+}
+
+@media(max-width:801px){
+    .main-container{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .container{
+        grid-template-rows:repeat(3,15vw);
+        grid-template-columns:repeat(3,15vw);
+    }
+    .game-info{
+        margin-left: 230px;
+        margin-right: 230px;
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:701px){
+    .main-container{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .container{
+        grid-template-rows:repeat(3,15vw);
+        grid-template-columns:repeat(3,15vw);
+    }
+    .game-info{
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-top: 30px;
+    }
+    button{
+        padding:3px 20px;
+    }
+}
+
+@media(max-width:540px){
+
+    nav{
+        height:10vw;
+        
+        font-size: 4vw;
+        font-family:  "Yuji Mai", serif;
+        padding:0 40px;
+        margin-bottom: 10px;
+    }
+    .main-container{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .container{
+        grid-template-rows:repeat(3,15vw);
+        grid-template-columns:repeat(3,15vw);
+    }
+    .game-info{
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 30px;
+    }
+    button{
+        padding:3px 20px;
+    }
+}
+
+@media(max-width:500px){
+    .main-container{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .container{
+        grid-template-rows:repeat(3,15vw);
+        grid-template-columns:repeat(3,15vw);
+    }
+    .game-info{
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 30px;
+    }
+    button{
+        padding:3px 15px;
+    }
+}
+
+@media(max-width:360px){
+    .main-container{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .container{
+        grid-template-rows:repeat(3,25vw);
+        grid-template-columns:repeat(3,25vw);
+    }
+    .game-info{
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 30px;
+        font-size: 5vw;
+    }
+    button{
+        padding:3px 15px;
+        font-size: 2vw;
+    }
+}
+
