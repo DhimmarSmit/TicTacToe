@@ -9,25 +9,49 @@ const changeChance = () =>{
 const checkToWin = ()=>{
     let squaretext = document.getElementsByClassName('squaretext');
     let wins = [
-        [0,1,2,0,5,0],
-        [3,4,5,0,18,0],
-        [6,7,8,0,29,0],
-        [0,3,6,-11.5,17,90],
-        [1,4,7,0.5,17,90],
-        [2,5,8,12.5,17,90],
-        [0,4,8,0.5,18,45],
-        [2,4,6,0.5,18,135]
+        [0,1,2],
+        [3,4,5],
+        [6,7,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
+        [0,4,8],
+        [2,4,6],
     ]
     wins.forEach(e =>{
-        if((squaretext[e[0]].innerText === squaretext[e[1]].innerText) && (squaretext[e[2]].innerText === squaretext[e[1]].innerText) && (squaretext[e[0]].innerText !== "") ){
+        if((squaretext[e[0]].innerText === squaretext[e[1]].innerText) && (squaretext[e[2]].innerText === squaretext[e[1]].innerText) && (squaretext[e[0]].innerText !== "")){
             document.querySelector('.info').innerText = squaretext[e[0]].innerText + " Won"
             gameIsFinish = true
             document.getElementsByTagName('img')[0].style.width = '200px';
-            document.querySelector('.line').style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`
-            document.querySelector('.line').style.opacity = "1"
+            showWinningLine(e);
         }
     })
 }
+
+const showWinningLine = (winningCombination) => {
+    const lines = document.querySelectorAll('.line, .line1, .line2, .line3, .line4, .line5, .line6, .line7');
+
+    // Hide all lines
+    lines.forEach(line => line.style.display = 'none');
+
+    const lineMapping = {
+        "0,1,2": ".line",      // Top horizontal
+        "3,4,5": ".line1",     // Middle horizontal
+        "6,7,8": ".line2",     // Bottom horizontal
+        "0,3,6": ".line3",     // Left vertical
+        "1,4,7": ".line4",     // Middle vertical
+        "2,5,8": ".line5",     // Right vertical
+        "0,4,8": ".line6",     // Diagonal top-left to bottom-right
+        "2,4,6": ".line7"      // Diagonal top-right to bottom-left
+    };
+
+    const lineClass = lineMapping[winningCombination.join(',')];
+    if (lineClass) {
+        const winningLine = document.querySelector(lineClass);
+        if (winningLine) winningLine.style.display = 'block';
+    }
+};
+
 
 let square = document.getElementsByClassName("square");
 Array.from(square).forEach(element =>{
@@ -51,11 +75,13 @@ btn.addEventListener('click',()=>{
     let squaretexts = document.querySelectorAll('.squaretext');
     Array.from(squaretexts).forEach(element =>{
         element.innerText =""
-        gameIsFinish =false
+        gameIsFinish = false
         document.getElementsByTagName('img')[0].style.width = '0px'
         document.getElementsByClassName("info")[0].innerText = "Turn For " + turn;
-        document.querySelector('.line').style.opacity = "0"
     })
-})
+    let lines = document.querySelectorAll('.line, .line1, .line2, .line3, .line4, .line5, .line6, .line7');
+    lines.forEach(element => {
+        element.style.display = 'none'; // Reset opacity for all lines
+    });
+});
 
- 

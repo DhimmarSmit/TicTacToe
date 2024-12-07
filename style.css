@@ -85,16 +85,95 @@ button{
     width:0;
     transition: width 1s ease-in-out;
 }
-
-.line{
-    width:35vw;
-    height:3px;
-    display: flex;
+.line {
     position: absolute;
-    background:red;
-    opacity:0;
-    transition: opacity 1s ease-in-out;
+    top: 80px; 
+    left: 0;
+    background-color: red;
+    height: 5px;
+    width: 35vw;
+    border-radius: 10px;
+    display: none;
 }
+
+.line1 {
+    position: absolute; 
+    top: 270px; 
+    left: 0; 
+    background-color: red;
+    height: 5px;
+    width: 35vw;
+    border-radius: 10px;
+    display: none;
+}
+
+.line2 {
+    position: absolute;
+    top: 460px; 
+    left: 0;
+    background-color: red;
+    height: 5px;
+    width: 35vw;
+    border-radius: 10px;
+    display: none;
+}
+
+.line3 {
+    position: absolute;
+    top: 15px; 
+    left: 90px; 
+    background-color: red;
+    height: 35vw;
+    width: 5px;
+    border-radius: 10px;
+    display: none;
+}
+
+.line4 {
+    position: absolute;
+    top: 15px; 
+    left: 275px;
+    background-color:red;
+    height: 35vw;
+    width: 5px;
+    border-radius: 10px;
+    display: none;
+}
+
+.line5 {
+    position: absolute;
+    top: 15px; 
+    left: 460px; 
+    background-color:red;
+    height: 35vw;
+    width: 5px;
+    border-radius: 10px;
+    display: none;
+}
+.line6 {
+    position: absolute;
+    top: 275px; 
+    left: 10px;
+    background-color:red;
+    height: 5px;
+    width: 35vw;
+    border-radius: 10px;
+    transform: rotate(45deg);
+    display: none;
+}
+
+.line7 {
+    position: absolute;
+    top: 264px; 
+    left: 15px;
+    background-color:red;
+    height: 5px;
+    width: 35vw;
+    border-radius: 10px;
+    transform: rotate(-45deg);
+    display: none;
+}
+
 
 @media(max-width:801px){
     .main-container{
@@ -105,10 +184,69 @@ button{
         grid-template-rows:repeat(3,15vw);
         grid-template-columns:repeat(3,15vw);
     }
+    .square{
+        font-size:15vw;
+    }
     .game-info{
         margin-left: 230px;
         margin-right: 230px;
         margin-top: 30px;
+    }
+    .line {
+        top: 60px; 
+        left: 0;
+        height: 5px;
+        width: 45vw;
+    }
+    
+    .line1 {
+        top: 182px; 
+        left: 0; 
+        height: 5px;
+        width: 45vw;
+    }
+    
+    .line2 {
+        top: 302px; 
+        left: 0;
+        height: 5px;
+        width: 45vw;
+    }
+    
+    .line3 {
+        top: 15px; 
+        left: 57px; 
+        height: 40vw;
+        width: 5px;
+    }
+    
+    .line4 {
+        top: 15px; 
+        left: 177px;
+        height: 40vw;
+        width: 5px;
+    }
+    
+    .line5 {
+        top: 15px; 
+        left: 298px; 
+        height: 40vw;
+        width: 5px;
+    }
+    .line6 {
+        top: 170px; 
+        left: 15px;
+        height: 5px;
+        width: 40vw;
+        transform: rotate(45deg);
+    }
+    
+    .line7 {
+        top: 170px; 
+        left: 5px;
+        height: 5px;
+        width: 45vw;
+        transform: rotate(-45deg);
     }
 }
 
@@ -121,6 +259,9 @@ button{
         grid-template-rows:repeat(3,15vw);
         grid-template-columns:repeat(3,15vw);
     }
+    .square{
+        font-size:15vw;
+    }
     .game-info{
         margin-left: 200px;
         margin-right: 200px;
@@ -128,6 +269,62 @@ button{
     }
     button{
         padding:3px 20px;
+    }
+    .line {
+        top: 50px; 
+        left: 0;
+        height: 5px;
+        width: 45vw;
+    }
+    
+    .line1 {
+        top: 160px; 
+        left: 0; 
+        height: 5px;
+        width: 45vw;
+    }
+    
+    .line2 {
+        top: 262px; 
+        left: 0;
+        height: 5px;
+        width: 45vw;
+    }
+    
+    .line3 {
+        top: 22px; 
+        left: 50px; 
+        height: 40vw;
+        width: 5px;
+    }
+    
+    .line4 {
+        top: 22px; 
+        left: 155px;
+        height: 40vw;
+        width: 5px;
+    }
+    
+    .line5 {
+        top: 22px; 
+        left: 260px; 
+        height: 40vw;
+        width: 5px;
+    }
+    .line6 {
+        top: 150px; 
+        left: 15px;
+        height: 5px;
+        width: 40vw;
+        transform: rotate(45deg);
+    }
+    
+    .line7 {
+        top: 150px; 
+        left: 5px;
+        height: 5px;
+        width: 45vw;
+        transform: rotate(-45deg);
     }
 }
 
@@ -149,6 +346,9 @@ button{
         grid-template-rows:repeat(3,15vw);
         grid-template-columns:repeat(3,15vw);
     }
+    .square{
+        font-size:15vw;
+    }
     .game-info{
         margin-left: 100px;
         margin-right: 100px;
@@ -156,6 +356,62 @@ button{
     }
     button{
         padding:3px 20px;
+    }
+    .line {
+        top: 40px; 
+        left: 0;
+        height: 5px;
+        width: 45vw;
+    }
+    
+    .line1 {
+        top: 123px; 
+        left: 0; 
+        height: 5px;
+        width: 45vw;
+    }
+    
+    .line2 {
+        top: 202px; 
+        left: 0;
+        height: 5px;
+        width: 45vw;
+    }
+    
+    .line3 {
+        top: 15px; 
+        left: 38px; 
+        height: 40vw;
+        width: 5px;
+    }
+    
+    .line4 {
+        top: 15px; 
+        left: 119px;
+        height: 40vw;
+        width: 5px;
+    }
+    
+    .line5 {
+        top: 15px; 
+        left: 200px; 
+        height: 40vw;
+        width: 5px;
+    }
+    .line6 {
+        top: 120px; 
+        left: 15px;
+        height: 5px;
+        width: 40vw;
+        transform: rotate(45deg);
+    }
+    
+    .line7 {
+        top: 116px; 
+        left: 5px;
+        height: 5px;
+        width: 45vw;
+        transform: rotate(-45deg);
     }
 }
 
@@ -168,6 +424,9 @@ button{
         grid-template-rows:repeat(3,15vw);
         grid-template-columns:repeat(3,15vw);
     }
+    .square{
+        font-size:15vw;
+    }
     .game-info{
         margin-left: 100px;
         margin-right: 100px;
@@ -175,6 +434,62 @@ button{
     }
     button{
         padding:3px 15px;
+    }
+    .line {
+        top: 40px; 
+        left: 0;
+        height: 5px;
+        width: 45vw;
+    }
+    
+    .line1 {
+        top: 116px; 
+        left: 0; 
+        height: 5px;
+        width: 45vw;
+    }
+    
+    .line2 {
+        top: 188px; 
+        left: 0;
+        height: 5px;
+        width: 45vw;
+    }
+    
+    .line3 {
+        top: 15px; 
+        left: 35px; 
+        height: 40vw;
+        width: 5px;
+    }
+    
+    .line4 {
+        top: 15px; 
+        left: 110px;
+        height: 40vw;
+        width: 5px;
+    }
+    
+    .line5 {
+        top: 15px; 
+        left: 186px; 
+        height: 40vw;
+        width: 5px;
+    }
+    .line6 {
+        top: 110px; 
+        left: 15px;
+        height: 5px;
+        width: 40vw;
+        transform: rotate(45deg);
+    }
+    
+    .line7 {
+        top: 106px; 
+        left: 5px;
+        height: 5px;
+        width: 45vw;
+        transform: rotate(-45deg);
     }
 }
 
@@ -187,15 +502,74 @@ button{
         grid-template-rows:repeat(3,25vw);
         grid-template-columns:repeat(3,25vw);
     }
+    .square{
+        font-size:20vw;
+    }
     .game-info{
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 50px;
+        margin-right: 50px;
         margin-top: 30px;
         font-size: 5vw;
     }
     button{
         padding:3px 15px;
         font-size: 2vw;
+    }
+    .line {
+        top: 38px; 
+        left: 0;
+        height: 5px;
+        width: 75vw;
+    }
+    
+    .line1 {
+        top: 127px; 
+        left: 0; 
+        height: 5px;
+        width: 75vw;
+    }
+    
+    .line2 {
+        top: 219px; 
+        left: 0;
+        height: 5px;
+        width: 75vw;
+    }
+    
+    .line3 {
+        top: 20px; 
+        left: 42px; 
+        height: 60vw;
+        width: 5px;
+    }
+    
+    .line4 {
+        top: 15px; 
+        left: 133px;
+        height: 60vw;
+        width: 5px;
+    }
+    
+    .line5 {
+        top: 15px; 
+        left: 223px; 
+        height: 60vw;
+        width: 5px;
+    }
+    .line6 {
+        top: 127px; 
+        left: -5px;
+        height: 5px;
+        width: 75vw;
+        transform: rotate(45deg);
+    }
+    
+    .line7 {
+        top: 137px; 
+        left: -5px;
+        height: 5px;
+        width: 75vw;
+        transform: rotate(-45deg);
     }
 }
 
