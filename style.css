@@ -10,9 +10,45 @@ nav{
     background:lightgoldenrodyellow;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-size: 2vw;
     font-family:  "Yuji Mai", serif;
     padding:0 80px;
+}
+
+.scorecard{
+    height:5vw;
+    width:10vw;
+    margin-top:7px;;
+}
+.info-score{
+    height:1.5vw;
+    font-size:0.8vw;
+    border: 1px solid black;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.players{
+    display:flex;
+    height:3vw;
+    border: 1px solid black;
+    font-size: 1.5vw;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.score1{
+    border-right: 1px solid black;
+    width:5vw;
+    text-align: center;
+}
+
+.score2{
+    border-left: 1px solid black;
+    width:5vw;
+    text-align: center;
 }
 
 .main-container{

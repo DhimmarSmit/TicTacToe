@@ -1,10 +1,22 @@
 let audio = new Audio('ting.mp3');
 turn = "X";
 let gameIsFinish = false;
+player1Count = 0;
+player2Count = 0;
 
 const changeChance = () =>{
     return turn === "X"? "O":"X"
 }
+
+const updateScore = (winner) => {
+    if (winner === "X") {
+        player1Count++;
+        document.querySelector('.score1 h1').textContent = player1Count;
+    } else if (winner === "O") {
+        player2Count++;
+        document.querySelector('.score2 h1').textContent = player2Count;
+    }
+};
 
 const checkToWin = ()=>{
     let squaretext = document.getElementsByClassName('squaretext');
@@ -24,6 +36,7 @@ const checkToWin = ()=>{
             gameIsFinish = true
             document.getElementsByTagName('img')[0].style.width = '200px';
             showWinningLine(e);
+            updateScore(squaretext[e[0]].innerText);
         }
     })
 }
@@ -66,9 +79,7 @@ Array.from(square).forEach(element =>{
                 document.getElementsByClassName("info")[0].innerText = "Turn For " + turn;
             }
         }
-
     })
-
 })
 
 btn.addEventListener('click',()=>{
