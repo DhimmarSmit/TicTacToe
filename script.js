@@ -11,10 +11,10 @@ const changeChance = () =>{
 const updateScore = (winner) => {
     if (winner === "X") {
         player1Count++;
-        document.querySelector('.score1 h1').textContent = player1Count;
+        document.querySelector('.score1 h1').innerText = player1Count;
     } else if (winner === "O") {
         player2Count++;
-        document.querySelector('.score2 h1').textContent = player2Count;
+        document.querySelector('.score2 h1').innerText = player2Count;
     }
 };
 
