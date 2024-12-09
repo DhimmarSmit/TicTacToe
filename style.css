@@ -607,5 +607,48 @@ button{
         width: 75vw;
         transform: rotate(-45deg);
     }
+
+    .scorecard{
+        height:10vw;
+        width:10vw;
+        margin-top:10px;;
+    }
+    .info-score{
+        height:3.5vw;
+        font-size:1.8vw;
+        border: 1px solid black;
+        text-align: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    
+    .players{
+        display:flex;
+        height:4vw;
+        border: 1px solid black;
+        font-size: 1.8vw;
+        justify-content: center;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    
+    .score1{
+        border-right: 1px solid black;
+        width:5vw;
+        text-align: center;
+    }
+    
+    .score2{
+        border-left: 1px solid black;
+        width:5vw;
+        text-align: center;
+    }
+
+    button{
+        
+        font-size: 2.0vw;
+    }
+    
+    
 }
 
